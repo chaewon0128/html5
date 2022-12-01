@@ -7,20 +7,41 @@ body {
   font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
   
 }
+/* 레이아웃 */
+.header, .visual, .main, .slogan, .footer-inner {
+  width: 940px;
+  margin: 0 auto;
+  box-sizing: border-box;
+  /* width+(padding+border)+margin */
+
+}
 /* 가급적 클래스방식의 선택자 추천 */
+
+/* 헤더 */
 .header {
   background-color: pink;
+  padding: 0 30px;
+
+  /* width+padding+border+margin  = box-sizing : content-box*/
+
 }
+/* 비주얼 */
 .visual {
   background-color: skyblue;
 }
+/* 메인 */
 .main {
   background-color: lavender;
 }
+/* 슬로건 */
 .slogan {
   background-color: lightcoral;
 }
+/* 푸터 */
 .footer {
+  background-color: slategray;
+}
+.footer-inner {
   background-color: lightgreen;
 }
 
