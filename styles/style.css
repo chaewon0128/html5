@@ -3,7 +3,7 @@
 
 
 /* 기본 스타일 */
-*, *::before, *::after {
+*, *::before, *::after{
   box-sizing: border-box;
   /* width+(padding+border)+margin */
 }
@@ -27,6 +27,7 @@ body {
 .header {
   background-color: pink;
   padding: 0 30px;
+  height: 10vh;
 
   /* width+padding+border+margin  = box-sizing : content-box*/
 
@@ -34,33 +35,40 @@ body {
 /* 비주얼 */
 .visual {
   background-color: skyblue;
+  height: 10vh;
 }
+
 /* 메인 */
 .main {
-  background-color: lavender;
-  display: flow-root;
-  height: 50vh;
-  padding: 0 15px;
-
+  background: lightgreen;
+  width: 940px;
+  min-height: 450px;
+  display: flex;
+  flew-flow: row nowrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 30px;
+  
+  
 }
 
-.group{
-  margin: 0 15px;
-  float: left;
-}
-.group1{
-  background: cornflowerblue;
+.group1 {
+  background-color: violet;
   width: 250px;
-  
+
+/* 1000*0.05=100px */
 }
-.group2{
-  background: saddlebrown;
+
+.group2 {
+  background-color: salmon;
   width: 380px;
-  
  
+
+  /* 1000*(300/2000)=   */
 }
-.group3{
-  background: gold;
+
+.group3 {
+  background-color: gold;
   width: 190px;
   
 }
@@ -69,14 +77,17 @@ body {
 .slogan {
   background-color: lightcoral;
   clear: both;
+  height: 10vh;
   
 }
 /* 푸터 */
 .footer {
   background-color: slategray;
+  height: 10vh;
 }
 .footer-inner {
   background-color: lightgreen;
+  height: 10vh;
 }
 
 
