@@ -1,40 +1,175 @@
+@import url("./fonts.css");
+@import url("./fontello.css");
 @import url(./normalize.css);
 @import url(./reset.css);
 
 
 /* 기본 스타일 */
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
   /* width+(padding+border)+margin */
+}
+
+html {
+  font-size: 10px;
+}
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+  color: black;
 }
 
 /* 본문 스타일 */
 body {
   background-color: #ffc;
   font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
-  
 }
 
 /* 레이아웃 */
-.header, .visual, .main, .slogan, .footer-inner {
+.header,
+.visual,
+.main,
+.slogan,
+.footer-inner {
   width: 940px;
   margin: 0 auto;
 }
 
-/* 가급적 클래스방식의 선택자 추천 */
-
 /* 헤더 */
 .header {
-  background-color: pink;
+  background-color: #ffffff;
+  border-radius: 0 0 15px 15px;
   padding: 0 30px;
+  position: relative;
+}
 
-  /* width+padding+border+margin  = box-sizing : content-box*/
+.logo {
+  position: absolute;
+  top: 45px;
+  left: 65px;
+}
+
+.member {
+  text-align: right;
+  padding: 4px 0;
+  font-size: 1.4rem;
+}
+
+.member_item {
+  display: inline-block;
+}
+
+.member_item a {
+  display: inline-block;
+  padding: 6px 8px;
+}
+
+.navigation {
+  padding-bottom: 40px;
+}
+
+.menu {
+  border-radius: 0 0 5px 5px;
+  border-top: 2px solid black;
+  height: 47px;
+  padding-left: 220px;
+
+  background: #43C6AC;
+  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #191654, #43C6AC);
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #191654, #43C6AC);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
 }
+
+.menu_item {
+  display: inline-block;
+  border-left: 2px solid #ffff;
+  position: relative;
+}
+
+.menu_button {
+  font-size: 1.6rem;
+  color: #ffffff;
+  font-weight: 700;
+  background-color: transparent;
+  line-height: 45px;
+  border: none;
+  display: inline-block;
+  padding: 0 21px;
+  text-shadow: 2px 2px 2px black;
+}
+
+
+
+.sub_menu {
+  display: none;
+  position: absolute;
+  top: 47px;
+  white-space: nowrap;
+  padding: 4px 0;
+}
+
+.sub_menu li {
+  display: inline-block;
+  font-size: 1.6rem;
+  margin-top: 3px;
+  margin-left: 15px;
+}
+
+.is-active .menu_button {
+  color: yellow;
+}
+
+.is-active .sub_menu {
+  display: block;
+}
+
+.sub-menu li {
+  display: inline-block;
+  margin-right: 0.2em;
+}
+
+.sub-menu a {
+  padding: 6px 8px;
+}
+
+.menu_html,
+.menu_css,
+.menu_standards {
+  left: 0;
+}
+
+.menu_accessibility,
+.menu_qna,
+.menu_archive {
+  right: 0;
+}
+
+.sub_menu a::before {
+  content: '\f192';
+  font-family: "fontello";
+  display: inline-block;
+  width: 1em;
+  margin-right: 0.2em;
+  text-align: center;
+}
+
+.sub_menu a:hover::before,
+.sub_menu a:focus::before {
+  content: '\e800';
+}
+
 /* 비주얼 */
 .visual {
+  clear: both;
   background-color: skyblue;
 }
+
 /* 메인 */
 .main {
   background-color: lavender;
@@ -44,42 +179,42 @@ body {
 
 }
 
-.group{
+.group {
   margin: 0 15px;
   float: left;
 }
-.group1{
+
+.group1 {
   background: cornflowerblue;
   width: 250px;
-  
+
 }
-.group2{
+
+.group2 {
   background: saddlebrown;
   width: 380px;
-  
- 
+
+
 }
-.group3{
+
+.group3 {
   background: gold;
   width: 190px;
-  
+
 }
 
 /* 슬로건 */
 .slogan {
   background-color: lightcoral;
   clear: both;
-  
+
 }
+
 /* 푸터 */
 .footer {
   background-color: slategray;
 }
+
 .footer-inner {
   background-color: lightgreen;
 }
-
-
-
-
-
